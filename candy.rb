@@ -1,13 +1,13 @@
 class Candy
-  attr_accessor :candyName, :isShelved
+  attr_accessor :candy_name, :is_shelved
 
   def initialize(candyName)
-    @candyName = candyName
-    @isShelved = false
+    @candy_name = candyName
+    @is_shelved = false
   end
 
   def set_shelf_status(shelf)
-    @isShelved = shelf
+    @is_shelved = shelf
   end
 
 
