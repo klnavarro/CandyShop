@@ -10,5 +10,4 @@ class Candy
     @is_shelved = shelf
   end
 
-
 end
