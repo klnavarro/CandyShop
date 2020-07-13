@@ -10,9 +10,11 @@ class Shop
   end
 
   def add_candy(candy_name)
-    if !@candy_list.include?(candy_name)
+    if !@candy_list.any?{|candy| candy.candy_name.casecmp?(candy_name)}
       new_candy = Candy.new(candy_name)
       @candy_list.push(new_candy)
+      puts "Added candy."
+    else puts "Candy already exists"
     end
   end
 
@@ -20,23 +22,28 @@ class Shop
     index = get_next_shelf_index
     new_shelf = Shelf.new(index)
     @shelf_list.push(new_shelf)
-    new_shelf.set_shelf_display(true)
+  end
+
+  def get_shelf_index(shelf_id)
+    @shelf_list.find_index{|shelf| shelf.shelf_id == shelf_id}
   end
 
   def remove_shelf(shelf_id)
-    index = @shelf_list.index(shelf_id)
-    shelf_id.set_shelf_status(false)
-
+    index = get_shelf_index(shelf_id)
+    @shelf_list[index].candy_list.each{|candy| candy.set_shelf_display = false}
     @shelf_list.delete_at(index)
   end
 
-  def get_next_shelf_index
-    return (@shelf_list.length + 1)
+  def get_candy(candy_name)
+    index = @candy_list.find_index{|candy| candy.candy_name.casecmp?(candy_name)}
+    return @candy_list.at(index)
   end
 
-  def access_shelf(shelf_id)
-    shelf_index = @shelf_list.index{|shelf| shelf.shelf_id == shelf_id}
-    return @shelf_list[shelf_index]
+  def get_next_shelf_index
+    if @shelf_list.empty?
+      return 1
+    else return (@shelf_list.last.shelf_id + 1)
+    end
   end
 
   def list_displayed_shelves
@@ -45,9 +52,21 @@ class Shop
     }
   end
 
+  def count_shelves
+    @shelf_list.count
+  end
+
   def print_shelf_contents
     @shelf_list.each{|shelf| shelf.is_displayed == true
-      puts shelf.print_candies
+    puts("Shelf #{shelf.shelf_id}: ")
+    puts shelf.print_candies
+    }
+    puts
+  end
+
+  def print_unshelved_candies
+    @candy_list.each{|candy| candy.is_shelved == false
+      puts candy.candy_name
     }
     puts
   end

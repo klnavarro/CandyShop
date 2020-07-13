@@ -4,19 +4,19 @@ class Shelf
   attr_accessor :shelf_id, :is_displayed, :candy_list
 
   def initialize(shelf_id)
+    @shelf_id = shelf_id
     @is_displayed = true
     @candy_list = Array.new
   end
 
-  def shelf_candy(candy)
+  def shelve_candy(candy)
     @candy_list.push(candy)
-    candy.set_shelf_status(true)
+    candy.set_candy_display(true)
   end
 
-  def unshelf_candy(candy)
-    index = @candy_list.index(candy)
-    candy.set_shelf_status(false)
-
+  def unshelve_candy(candy)
+    index = @candy_list.find_index(candy)
+    candy.set_candy_display(false)
     @candy_list.delete_at(index)
   end
 
@@ -24,7 +24,11 @@ class Shelf
     @is_displayed = option
   end
 
-  def print_candies()
+  def count_candies
+    @candy_list.count
+  end
+
+  def print_candies
     @candy_list.each{|candy|
       puts candy.candy_name
     }

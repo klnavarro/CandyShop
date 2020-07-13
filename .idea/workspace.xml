@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b9a0f819-fbef-4f7f-b6cb-db5b3b55169c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Ruby File" />
+        <option value="Ruby Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1e8ONghH1GgE01jr66cCsnvKyal" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="init" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="Candy" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/init.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Ruby.init" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9a0f819-fbef-4f7f-b6cb-db5b3b55169c" name="Default Changelist" comment="" />
+      <created>1593699714750</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593699714750</updated>
+      <workItem from="1593699715977" duration="7873000" />
+      <workItem from="1593818714495" duration="1557000" />
+      <workItem from="1593905080619" duration="598000" />
+      <workItem from="1594078997006" duration="6835000" />
+      <workItem from="1594135962347" duration="22279000" />
+      <workItem from="1594329299458" duration="9875000" />
+      <workItem from="1594429466078" duration="5601000" />
+      <workItem from="1594522363031" duration="9874000" />
+      <workItem from="1594599959009" duration="27318000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="762" y="386" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593699810423">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="762" y="386" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1593699810423" />
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1594642679872">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="568" height="107" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1600.0.1600.900@-1600.0.1600.900" timestamp="1594263496740" />
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1594642679872" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1594642679872">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="568" height="107" key="GridCell.Tab.0.center/0.0.1920.1080/-1600.0.1600.900@-1600.0.1600.900" timestamp="1594263496739" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1594642679872" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1594642679872">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="568" height="107" key="GridCell.Tab.0.left/0.0.1920.1080/-1600.0.1600.900@-1600.0.1600.900" timestamp="1594263496739" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1594642679872" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1594642679872">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="568" height="107" key="GridCell.Tab.0.right/0.0.1920.1080/-1600.0.1600.900@-1600.0.1600.900" timestamp="1594263496740" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1594642679872" />
+    <state width="1877" height="355" key="GridCell.Tab.1.bottom" timestamp="1594642046115">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="355" key="GridCell.Tab.1.bottom/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1594642046115" />
+    <state width="1877" height="355" key="GridCell.Tab.1.center" timestamp="1594642046115">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="355" key="GridCell.Tab.1.center/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1594642046115" />
+    <state width="1877" height="355" key="GridCell.Tab.1.left" timestamp="1594642046114">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="355" key="GridCell.Tab.1.left/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1594642046114" />
+    <state width="1877" height="355" key="GridCell.Tab.1.right" timestamp="1594642046115">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="355" key="GridCell.Tab.1.right/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1594642046115" />
+    <state x="600" y="401" key="search.everywhere.popup" timestamp="1594330797179">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="600" y="401" key="search.everywhere.popup/0.0.1920.1080/-1600.0.1600.900@0.0.1920.1080" timestamp="1594330797179" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Candy@init.rcov" NAME="init Coverage Results" MODIFIED="1594642679860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Candy" />
+  </component>
+</project>
