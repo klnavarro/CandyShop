@@ -29,6 +29,8 @@ class Menu
         shop.print_shelf_contents
       when "7"
         is_running = false
+      else
+        puts "Please enter a valid command."
       end
 
       run_shop_menu(is_running, shop)
@@ -51,7 +53,8 @@ class Menu
       when "4"
         puts "Leaving shelf view."
         is_running = false
-
+      else
+        puts "Please enter a valid command."
       end
 
       run_shelf_menu(is_running, shelf, shop)
@@ -69,12 +72,13 @@ class Menu
       puts "Select a shelf:"
       shop.list_displayed_shelves
       selection = gets.chomp.to_i
-      index = shop.get_shelf_index(selection)
 
-      if !shop.shelf_list.at(index).nil?
+      if shop.shelf_list.any?{|shelf| shelf.shelf_id == selection}
+        index = shop.get_shelf_index(selection)
         puts "You've selected a shelf to edit."
-        run_shelf_menu(true, shop.shelf_list.at(selection), shop)
-      else puts "The shelf you've selected doesn't exist."
+        run_shelf_menu(true, shop.shelf_list.at(index), shop)
+
+      else puts "The shelf you've selected doesn't exist"
       end
 
     else puts "There are no shelves."
@@ -85,13 +89,13 @@ class Menu
     if !shop.shelf_list.empty?
       puts "Which shelf would you like to remove?"
       shop.list_displayed_shelves
-      selection = gets.chomp.to_i
-      index = shop.get_shelf_index(selection)
 
-      if !shop.shelf_list.at(index).nil?
+      selection = gets.chomp.to_i
+
+      if shop.shelf_list.any?{|shelf| shelf.shelf_id == selection}
         shop.remove_shelf(selection)
         puts "Removed shelf #{selection}."
-      else "The shelf doesn't exist."
+      else puts "The shelf doesn't exist."
       end
 
     else puts "There are no shelves."
@@ -105,21 +109,27 @@ class Menu
       puts "Which candy would you like to shelf? (enter candy name)"
 
       selection = gets.chomp
-      shelf.shelve_candy(shop.get_candy(selection))
-
-      puts "Shelved candy."
+      if shop.candy_list.any?{|candy| candy.candy_name.casecmp?(selection)}
+        shelf.shelve_candy(shop.get_candy(selection))
+      else puts "The candy you've entered can't be found."
+      end
     else puts "There are no candies to shelve"
     end
   end
 
   def unshelve_candy(shop, shelf)
-    puts "Which candy would you like to unshelve?"
+    if !shelf.candy_list.empty?
+      puts "Which candy would you like to unshelve?"
 
-    shelf.print_candies
+      shelf.print_candies
 
-    selection = gets.chomp
-    shelf.unshelve_candy(shop.get_candy(selection))
+      selection = gets.chomp
+      if shelf.candy_list.any?{|candy| candy.candy_name.casecmp?(selection)}
+        shelf.unshelve_candy(shop.get_candy(selection))
+      else puts "The candy you've selected is not in this shelf."
+      end
 
-    puts "Unshelved candy."
+      puts "Unshelved candy."
+    end
   end
 end

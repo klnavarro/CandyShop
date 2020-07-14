@@ -30,7 +30,7 @@ class Shop
 
   def remove_shelf(shelf_id)
     index = get_shelf_index(shelf_id)
-    @shelf_list[index].candy_list.each{|candy| candy.set_shelf_display = false}
+    @shelf_list[index].candy_list.each{|candy| candy.set_candy_display(false)}
     @shelf_list.delete_at(index)
   end
 
@@ -47,8 +47,10 @@ class Shop
   end
 
   def list_displayed_shelves
-    @shelf_list.each{|shelf| shelf.is_displayed == true
-      puts shelf.shelf_id
+    @shelf_list.each{|shelf|
+      if shelf.is_displayed == true
+        puts shelf.shelf_id
+      end
     }
   end
 
@@ -57,16 +59,20 @@ class Shop
   end
 
   def print_shelf_contents
-    @shelf_list.each{|shelf| shelf.is_displayed == true
-    puts("Shelf #{shelf.shelf_id}: ")
-    puts shelf.print_candies
+    @shelf_list.each{|shelf|
+      if shelf.is_displayed == true
+        puts("Shelf #{shelf.shelf_id}: ")
+        puts shelf.print_candies
+      end
     }
     puts
   end
 
   def print_unshelved_candies
-    @candy_list.each{|candy| candy.is_shelved == false
-      puts candy.candy_name
+    @candy_list.each{|candy|
+      if candy.is_shelved == false
+        puts candy.candy_name
+      end
     }
     puts
   end
