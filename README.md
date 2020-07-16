@@ -5,7 +5,7 @@ Ruby program to mimic a shop environment
 - Ruby 2.5 or newer
 
 # Deployment
-- Clone repository to computer
-- Open Command Prompt with Ruby
-- Navigate to repository
-- Run init.rb
+1. Clone repository to computer
+2. Open Command Prompt with Ruby
+3. Navigate to repository
+4. Run init.rb
