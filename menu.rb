@@ -4,15 +4,16 @@ load 'shelf.rb'
 class Menu
 
   def initialize(shop)
-    run_shop_menu(true, shop)
+    run_shop_menu(shop)
   end
 
-  def run_shop_menu(is_running, shop)
-    if is_running
+  def run_shop_menu(shop)
+    is_running = true
+    while is_running
       puts "Welcome to the shop. There are #{shop.count_shelves} shelves.\nSelect an option:\n1: Add candy\n2: Add shelf\n3: Edit shelf\n4: Remove shelf\n5: View all candies\n6: View shelved candies\n7: Exit"
-
+  
       option = gets.chomp
-
+  
       case option
       when "1"
         add_shop_candy(shop)
@@ -32,13 +33,13 @@ class Menu
       else
         puts "Please enter a valid command."
       end
-
-      run_shop_menu(is_running, shop)
     end
   end
 
-  def run_shelf_menu(is_running, shelf, shop)
-    if is_running
+
+  def run_shelf_menu(shelf, shop)
+    is_running = true
+    while is_running
       puts "There are #{shelf.count_candies} candies. Select an option (Enter number):\n1: Shelve candy\n2: Unshelve candy\n3: View candies\n4: Return to shop"
 
       option = gets.chomp
@@ -56,8 +57,6 @@ class Menu
       else
         puts "Please enter a valid command."
       end
-
-      run_shelf_menu(is_running, shelf, shop)
     end
   end
 
@@ -76,7 +75,7 @@ class Menu
       if shop.shelf_list.any?{|shelf| shelf.shelf_id == selection}
         index = shop.get_shelf_index(selection)
         puts "You've selected a shelf to edit."
-        run_shelf_menu(true, shop.shelf_list.at(index), shop)
+        run_shelf_menu(shop.shelf_list.at(index), shop)
 
       else puts "The shelf you've selected doesn't exist"
       end
